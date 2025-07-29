@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 
-export class NavbarComponent {
+
+export class NavbarComponent implements OnInit {
+  constructor(private Shared: SharedService) { }
+
+  closeSideBar() { this.Shared.closeSideBar.next(true) }
+
+  refresh() { window.location.reload() }
+
+  ngOnInit(): void { }
 
 }
