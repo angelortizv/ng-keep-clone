@@ -1,5 +1,5 @@
 :root {
-  --note-width: 240px
+  --note-width: 240px;
 }
 
 .main {
@@ -41,11 +41,9 @@
   background-color: rgb(0 0 0 / 61%);
   padding: 3px 9px;
   font-size: 15px;
-  font-family: 'Google Sans';
+  font-family: "Google Sans";
   border-radius: 5px;
-
 }
-
 
 /* ===== Scrollbar CSS ===== */
 
@@ -61,7 +59,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
   background-clip: padding-box;
   border: solid transparent;
   border-width: 1px 1px 1px 6px;
