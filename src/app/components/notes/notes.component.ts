@@ -8,9 +8,12 @@ import { ActivationEnd, NavigationEnd, Router } from '@angular/router';
 import { bgColors, bgImages } from 'src/app/interfaces/tooltip';
 import { NotesToolsPipe } from 'src/app/pipes/notes-tools.pipe';
 import { CommonModule } from '@angular/common';
+import { ph } from 'src/app/pipes/ph.pipe';
+import { CboxSortPipe } from 'src/app/pipes/cbox-sort.pipe';
+import { InputComponent } from '../input/input.component';
 @Component({
   selector: 'app-notes',
-  imports: [CommonModule, NotesToolsPipe],
+  imports: [CommonModule, NotesToolsPipe, ph, CboxSortPipe, InputComponent],
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
 })
@@ -222,6 +225,7 @@ export class NotesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.Shared.note)
     this.Shared.closeSideBar.subscribe(() => { setTimeout(() => { this.buildMasonry() }, 200) })
     this.Shared.closeModal.subscribe(x => { if (x) this.closeModal() })
     this.Shared.noteViewType.subscribe(() => { setTimeout(() => this.buildMasonry(), 300); })

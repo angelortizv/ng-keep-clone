@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { NotesComponent } from '../notes/notes.component';
-import { NotesToolsPipe } from '../../pipes/notes-tools.pipe';
+import { InputComponent } from "../input/input.component";
 
 @Component({
   selector: 'app-main',
-  imports: [NavbarComponent, SidenavComponent, NotesComponent],
+  imports: [NavbarComponent, SidenavComponent, NotesComponent, InputComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
