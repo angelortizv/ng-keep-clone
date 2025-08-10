@@ -20,7 +20,9 @@
             "outputPath": "dist/ng-keep-clone",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -91,7 +93,10 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -104,7 +109,17 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["node-snackbar/dist/snackbar.js"]
+            "scripts": [
+              "node-snackbar/dist/snackbar.js"
+            ]
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/ng-keep-clone",
+            "netlifyToken": "nfp_tucNpp8De9eU9ZRPfX1C1N6hFvz664z34cff",
+            "siteId": "00854e0e-7a8f-49db-bf5b-9312679c56cb"
           }
         }
       }

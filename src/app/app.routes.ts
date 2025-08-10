@@ -6,7 +6,7 @@ export const routes: Routes = [
     { path: "", component: MainComponent },
     { path: "archive", component: MainComponent },
     { path: "trash", component: MainComponent },
-    { path: "label/:name", component: MainComponent },
+    /*{ path: "label/:name", component: MainComponent },*/
     { path: '**', redirectTo: '' }
 ];
 
