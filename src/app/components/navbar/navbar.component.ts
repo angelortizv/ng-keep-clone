@@ -16,6 +16,11 @@ export class NavbarComponent implements OnInit {
 
   refresh() { window.location.reload() }
 
+  view() {
+    this.Shared.noteViewType.value === 'grid' ? this.Shared.noteViewType.next('list') : this.Shared.noteViewType.next('grid')
+  }
+
+
   ngOnInit(): void { }
 
 }
