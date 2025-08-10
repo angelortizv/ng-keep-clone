@@ -89,6 +89,7 @@
     font-weight: 500;
     line-height: 1.5rem;
     -webkit-line-clamp: 3;
+    
   }
 
   .body {
@@ -139,6 +140,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #dadce0;
 
   .image {
     background-size: 120px 120px;
@@ -170,6 +172,7 @@
   height: 100%;
   background-color: rgb(32, 33, 36, 0.85);
   overflow: hidden;
+  color: #dadce0;
 
   .modal {
     position: absolute;
