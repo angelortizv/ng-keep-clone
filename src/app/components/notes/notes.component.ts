@@ -225,12 +225,13 @@ export class NotesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.Shared.note)
+    //console.log(this.Shared.note)
     this.Shared.closeSideBar.subscribe(() => { setTimeout(() => { this.buildMasonry() }, 200) })
     this.Shared.closeModal.subscribe(x => { if (x) this.closeModal() })
     this.Shared.noteViewType.subscribe(() => { setTimeout(() => this.buildMasonry(), 300); })
     this.router.events.subscribe(url => {
       if (url instanceof NavigationEnd) {
+        //console.log(url.url)
         url.url.includes('archive') ? this.currentPage.archive = true : this.currentPage.archive = false
         url.url.includes('trash') ? this.currentPage.trash = true : this.currentPage.trash = false
       }
